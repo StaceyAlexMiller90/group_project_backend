@@ -8,12 +8,10 @@ const router = new Router();
 router.get('/', async (req,res,next) => {
   try {
     const cars = await Car.findAll()
-    res.status(200).send( {message: 'ok', cars} )
+    res.status(200).send( cars )
   } catch(e) {
     next(e)
   }
 })
-
-
 
 module.exports = router;

@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
   );
   order.associate = function (models) {
     // associations can be defined here
-    order.hasMany(models.car);
     order.belongsTo(models.user);
     order.belongsToMany(models.car, {
       through: "orderLines",
