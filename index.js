@@ -151,6 +151,10 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 const authRouter = require("./routers/auth");
 app.use("/", authRouter);
 
+
+const carsRouter = require("./routers/cars");
+app.use("/cars", carsRouter);
+
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
 
