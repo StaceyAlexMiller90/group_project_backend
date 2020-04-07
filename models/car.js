@@ -15,11 +15,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      isElectric: DataTypes.BOOLEAN,
+      imageUrl: {
+        type: DataTypes.STRING,
+      },
       price: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
       },
+      isElectric: DataTypes.BOOLEAN,
       modelYear: {
         type: DataTypes.INTEGER,
         allowNull: false,
