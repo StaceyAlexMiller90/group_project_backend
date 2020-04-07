@@ -20,12 +20,15 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      isElectric: {
-        type: Sequelize.BOOLEAN,
+      imageUrl: {
+        type: Sequelize.STRING,
       },
       price: {
         type: Sequelize.INTEGER,
         defaultValue: 0,
+      },
+      isElectric: {
+        type: Sequelize.BOOLEAN,
       },
       modelYear: {
         type: Sequelize.INTEGER,
