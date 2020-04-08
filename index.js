@@ -154,6 +154,9 @@ app.use("/", authRouter);
 const inventoryRouter = require("./routers/inventory");
 app.use("/inventory", inventoryRouter);
 
+const orderRouter = require("./routers/order");
+app.use("/order", orderRouter);
+
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
 

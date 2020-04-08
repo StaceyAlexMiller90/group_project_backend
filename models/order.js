@@ -15,6 +15,30 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
       },
+      countryCode: {
+        type: DataTypes.INTEGER,
+      },
+      phoneNumber: {
+        type: DataTypes.INTEGER,
+      },
+      street: {
+        type: DataTypes.STRING,
+      },
+      houseNumber: {
+        type: DataTypes.STRING,
+      },
+      aptsuite: {
+        type: DataTypes.STRING,
+      },
+      city: {
+        type: DataTypes.STRING,
+      },
+      postalCode: {
+        type: DataTypes.STRING,
+      },
+      country: {
+        type: DataTypes.STRING,
+      }
     },
     {}
   );

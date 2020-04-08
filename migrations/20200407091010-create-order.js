@@ -20,6 +20,30 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
+      countryCode: {
+        type: Sequelize.INTEGER,
+      },
+      phoneNumber: {
+        type: Sequelize.INTEGER,
+      },
+      street: {
+        type: Sequelize.STRING,
+      },
+      houseNumber: {
+        type: Sequelize.STRING,
+      },
+      aptsuite: {
+        type: Sequelize.STRING,
+      },
+      city: {
+        type: Sequelize.STRING,
+      },
+      postalCode: {
+        type: Sequelize.STRING,
+      },
+      country: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
