@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
 });
 
 router.get("/:id", async (req, res, next) => {
-  const id = req.params.id
+  const id = req.params.id;
   try {
     const car = await Car.findByPk(id);
     res.status(200).send(car);
