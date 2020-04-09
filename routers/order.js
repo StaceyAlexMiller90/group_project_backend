@@ -20,6 +20,7 @@ router.post("/", authMiddleware, async (req, res, next) => {
     country,
     cart
   } = req.body
+ 
   try {
     const order = await Order.create({
       paid: true,
@@ -34,16 +35,15 @@ router.post("/", authMiddleware, async (req, res, next) => {
       country,
       userId
     })
-    const orderId = order.id
-    await cart.map(item => OrderLine.create({
-        orderId, 
+      await Promise.all (cart.map(async item => OrderLine.create({
+        orderId: order.id, 
         carId: item.id, 
         quantity: item.quantity
-      }))
+      })))
+      res.status(200).send({message: 'Order placed'})
   } catch(e) {
     next(e)
   }
 });
-
 
 module.exports = router;
